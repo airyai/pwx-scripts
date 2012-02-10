@@ -1,0 +1,20 @@
+#!/usr/bin/env python
+
+import os, shutil, fnmatch
+
+SKIP_FILES = {'README', 'setup', '.*'}
+
+for p in os.listdir("."):
+	skip = False
+	for s in SKIP_FILES:
+		if (fnmatch.fnmatch(p, s)):
+			skip = True
+			break
+	if skip:
+		continue
+	print ('copying %s ...' % p)
+	cp = shutil.copy2
+	if (os.path.isdir(p)):
+		cp = shutil.copytree
+	cp(p, os.path.join('/usr/local/bin/', p))
+

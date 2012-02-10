@@ -1,1 +1,31 @@
-Better use the scripts by putting them in /usr/local/bin
+PWX's daily usefull scripts.
+Mostly written in Python, and tested only in Linux.
+Better use the scripts by putting them in /usr/local/bin.
+
+Scripts:
+
+setup: setup
+	Copy all scripts into /usr/local/bin
+
+all2utf: all2utf [pattern] [-R]
+	Auto detect the encoding of text files and conver them into UTF-8.
+	A few pattern examples are: *.txt, *.* etc.
+
+doubleline: doubleline text-file
+	Read the text-file, remove single newline, and keep double newline.
+
+gbunzip: gbunzip archive-file
+	Useful script for Linux users to extract zip files in GB18030 codec.
+
+qdren: qdren text-file
+	Bash script, select the first line of a text-file and rename it into '{first line}.txt'.
+
+qdren-all: qdren-all
+	Enumerate all files under current directory and call qdren {filename}.
+
+sogou-proxy: sogou-proxy
+	NOTE: this script is not my work. Please visit author homepage: http://xiaoxia.org.
+	Open local port 1998 and transport it to Sogou Explorer CERNET accelerate proxy.
+
+wordcount: wordcount pattern
+	Select all files under current directory which match the pattern and count the words in it.
