@@ -2,7 +2,7 @@
 
 import os, shutil, fnmatch
 
-SKIP_FILES = {'README', 'setup', '.*'}
+SKIP_FILES = set(['README', 'setup', '.*'])
 
 for p in os.listdir("."):
 	skip = False

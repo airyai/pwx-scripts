@@ -7,7 +7,7 @@ print ('')
 
 VALV = 0.9
 
-REC_TABLE = {'on', 'true', 'yes', '-r', 'recursive'}
+REC_TABLE = set(['on', 'true', 'yes', '-r', 'recursive'])
 pattern = '*' if len(sys.argv) < 2 else sys.argv[1]
 recursive = 'off' if len(sys.argv) < 3 else sys.argv[2]
 if (pattern.lower() in REC_TABLE):
